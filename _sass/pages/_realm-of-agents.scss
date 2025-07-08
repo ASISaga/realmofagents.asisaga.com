@@ -95,3 +95,81 @@
     }
   }
 }
+
+// Main container for the Realm of Agents overview page
+.realmofagents-main {
+  @extend .container-xxl;
+
+  .overview-section {
+    @extend .mb-5;
+    h1 { @extend .display-4; }
+    .lead { @extend .lead; }
+  }
+
+  .purpose-section {
+    @extend .mb-5;
+    h2 { @extend .h2; }
+    ul { @extend .list-unstyled; }
+  }
+
+  .core-components-section {
+    @extend .mb-5;
+    h2, h3 { @extend .h3; }
+    ul { @extend .list-unstyled; }
+  }
+
+  .architecture-section {
+    @extend .mb-5;
+    h2, h3 { @extend .h3; }
+    ul { @extend .list-unstyled; }
+  }
+
+  .features-section {
+    @extend .mb-5;
+    h2, h3 { @extend .h3; }
+    ul { @extend .list-unstyled; }
+  }
+
+  .workflow-section {
+    @extend .mb-5;
+    h2, h3 { @extend .h3; }
+    pre { @extend .bg-light; @extend .p-3; @extend .rounded; }
+    ul { @extend .list-unstyled; }
+  }
+
+  .tech-stack-section {
+    @extend .mb-5;
+    h2, h3 { @extend .h3; }
+    ul { @extend .list-unstyled; }
+  }
+
+  .deployment-section {
+    @extend .mb-5;
+    h2, h3 { @extend .h3; }
+    ul { @extend .list-unstyled; }
+  }
+
+  .contributing-section {
+    @extend .mb-5;
+    h2, h3 { @extend .h3; }
+    ol { @extend .ps-3; }
+  }
+
+  .related-projects-section {
+    @extend .mb-5;
+    h2 { @extend .h3; }
+    ul { @extend .list-unstyled; }
+  }
+
+  .license-section {
+    @extend .mb-5;
+    h2 { @extend .h3; }
+  }
+
+  .contact-section {
+    @extend .mb-5;
+    h2 { @extend .h3; }
+    ul { @extend .list-unstyled; }
+    .platform-note { @extend .fst-italic; }
+  }
+}
