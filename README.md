@@ -1,6 +1,6 @@
 # realmofagents.asisaga.com
 
-**The Dynamic Web Platform for AI Agent Demonstration and Testing**
+**The Dynamic Web Platform  for AI Agent Demonstration and Testing**
 
 ## Overview 
 
