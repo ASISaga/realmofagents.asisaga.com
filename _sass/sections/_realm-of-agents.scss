@@ -1,371 +1,192 @@
-// Realm of Agents section specific styles
+/**
+ * Realm of Agents section - Ontological SCSS mapping
+ * Maps HTML semantic classes to Genesis ontological roles
+ * SCSS structure mirrors HTML DOM hierarchy
+ */
+
 .realm-of-agents-container {
-  width: 100%;
+  @include genesis-environment('focused');
   
-  // Header section
   .realm-header-section {
-    background: linear-gradient(135deg, lighten($info, 45%) 0%, $white 100%);
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
-    padding: 3rem 1rem;
-    margin-bottom: 3rem;
-    text-align: center;
+    @include genesis-entity('primary');
+    @include genesis-atmosphere('ethereal');
     
     .realm-header-content {
-      max-width: 800px;
-      margin: 0 auto;
+      @include genesis-environment('focused');
     }
     
     .realm-title {
-      font-size: $font-size-xl;
-      font-weight: $font-weight-bold;
-      color: $primary;
-      margin-bottom: 1rem;
+      @include genesis-cognition('axiom');
     }
     
     .realm-subtitle {
-      font-size: $font-size-lg;
-      color: $secondary;
-      margin-bottom: 1.5rem;
+      @include genesis-cognition('motive');
     }
   }
   
-  // Agent description section
   .agent-description-section {
-    margin-bottom: 3rem;
+    @include genesis-environment('distributed');
     
     .agent-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 3rem;
-      
-      &:nth-child(even) {
-        flex-direction: row-reverse;
-        
-        @media (max-width: 767.98px) {
-          flex-direction: column-reverse;
-        }
-      }
-      
-      @media (max-width: 767.98px) {
-        flex-direction: column-reverse;
-      }
+      @include genesis-entity('secondary');
       
       .agent-image-column {
-        flex: 0 0 auto;
-        width: 100%;
-        padding: 1rem;
-        
-        @media (min-width: 768px) {
-          width: 40%;
-        }
-        
         .agent-image {
-          width: 100%;
-          border-radius: $border-radius;
-          box-shadow: $box-shadow;
+          @include genesis-entity('primary');
         }
       }
       
       .agent-content-column {
-        flex: 0 0 auto;
-        width: 100%;
-        padding: 1rem;
-        
-        @media (min-width: 768px) {
-          width: 60%;
-        }
-        
         .agent-name {
-          font-size: $font-size-lg;
-          font-weight: $font-weight-bold;
-          color: $primary;
-          margin-bottom: 0.75rem;
+          @include genesis-cognition('axiom');
         }
         
         .agent-description {
-          color: $body-color;
-          margin-bottom: 1.5rem;
+          @include genesis-cognition('discourse');
         }
         
         .agent-features {
-          margin-bottom: 1.5rem;
-          
           .agent-feature-item {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: flex-start;
+            @include genesis-cognition('discourse');
             
             .agent-feature-icon {
-              color: $primary;
-              margin-right: 0.75rem;
-              font-size: 1.25rem;
-              flex-shrink: 0;
+              @include genesis-cognition('motive');
             }
             
             .agent-feature-text {
-              flex-grow: 1;
+              @include genesis-cognition('discourse');
             }
           }
         }
         
         .agent-button {
-          display: inline-block;
-          text-align: center;
-          font-weight: $font-weight-medium;
-          padding: 0.75rem 1.5rem;
-          border-radius: 50rem;
-          text-decoration: none;
-          transition: all 0.15s ease-in-out;
-          background-color: $primary;
-          color: $white;
-          border: 1px solid $primary;
-          
-          &:hover {
-            background-color: darken($primary, 7.5%);
-            border-color: darken($primary, 10%);
-          }
+          @include genesis-synapse('execute');
         }
       }
     }
   }
   
-  // Technical specifications section
   .technical-specs-section {
-    background: $gray-100;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
-    border-radius: $border-radius;
+    @include genesis-environment('manifest');
+    @include genesis-atmosphere('ethereal');
     
     .specs-container {
-      width: 100%;
-      padding-right: var(--bs-gutter-x, 0.75rem);
-      padding-left: var(--bs-gutter-x, 0.75rem);
-      margin-right: auto;
-      margin-left: auto;
-      max-width: 1140px;
+      @include genesis-environment('distributed');
     }
     
     .specs-title {
-      font-size: $font-size-xl;
-      font-weight: $font-weight-bold;
-      color: $primary;
-      margin-bottom: 2rem;
-      text-align: center;
+      @include genesis-cognition('axiom');
     }
     
     .specs-row {
-      display: flex;
-      flex-wrap: wrap;
-      margin-right: calc(var(--bs-gutter-x) * -0.5);
-      margin-left: calc(var(--bs-gutter-x) * -0.5);
-      
-      .specs-column {
-        flex: 0 0 auto;
-        width: 100%;
-        padding-right: calc(var(--bs-gutter-x) * 0.5);
-        padding-left: calc(var(--bs-gutter-x) * 0.5);
-        margin-bottom: 1.5rem;
-        
-        @media (min-width: 768px) {
-          width: 50%;
-        }
-        
-        @media (min-width: 992px) {
-          width: 33.333333%;
-        }
-      }
+      @include genesis-environment('distributed');
     }
     
     .specs-card {
-      background-color: $white;
-      border-radius: $border-radius-sm;
-      box-shadow: $box-shadow;
-      padding: 1.5rem;
-      height: 100%;
+      @include genesis-entity('primary');
       
       .specs-card-title {
-        font-size: 1.1rem;
-        font-weight: $font-weight-bold;
-        color: $primary;
-        margin-bottom: 1rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid $gray-100;
+        @include genesis-cognition('motive');
       }
       
       .specs-list {
-        margin-bottom: 0;
-        padding-left: 0;
-        list-style: none;
+        @include genesis-cognition('discourse');
         
         .specs-list-item {
-          display: flex;
-          justify-content: space-between;
-          padding: 0.5rem 0;
-          border-bottom: 1px dashed rgba($secondary, 0.2);
-          
           .specs-label {
-            color: $secondary;
-            font-weight: $font-weight-medium;
+            @include genesis-cognition('gloss');
           }
           
           .specs-value {
-            font-weight: $font-weight-bold;
+            @include genesis-cognition('discourse');
           }
         }
       }
     }
   }
   
-  // Code examples section
   .code-examples-section {
-    margin-bottom: 3rem;
+    @include genesis-environment('focused');
     
     .code-container {
-      width: 100%;
-      padding-right: var(--bs-gutter-x, 0.75rem);
-      padding-left: var(--bs-gutter-x, 0.75rem);
-      margin-right: auto;
-      margin-left: auto;
-      max-width: 1140px;
+      @include genesis-environment('focused');
     }
     
     .code-title {
-      font-size: $font-size-xl;
-      font-weight: $font-weight-bold;
-      color: $primary;
-      margin-bottom: 1rem;
-      text-align: center;
+      @include genesis-cognition('axiom');
     }
     
     .code-subtitle {
-      font-size: $font-size-lg;
-      color: $secondary;
-      margin-bottom: 2rem;
-      text-align: center;
+      @include genesis-cognition('motive');
     }
     
     .code-block {
-      background-color: #282c34;
-      border-radius: $border-radius-sm;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      overflow-x: auto;
+      @include genesis-cognition('protocol');
+      @include genesis-atmosphere('void');
       
       code {
-        color: #abb2bf;
-        font-family: 'Courier New', Courier, monospace;
-        line-height: 1.5;
-        white-space: pre;
+        @include genesis-cognition('protocol');
       }
       
       .code-comment {
-        color: #5c6370;
-        font-style: italic;
+        @include genesis-cognition('gloss');
       }
       
       .code-keyword {
-        color: #c678dd;
+        @include genesis-cognition('protocol');
       }
       
       .code-string {
-        color: #98c379;
+        @include genesis-cognition('protocol');
       }
       
       .code-function {
-        color: #61afef;
+        @include genesis-cognition('protocol');
       }
     }
     
     .code-explanation {
-      background: $gray-100;
-      border-radius: $border-radius-sm;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
+      @include genesis-entity('secondary');
+      @include genesis-atmosphere('ethereal');
       
       .explanation-title {
-        font-weight: $font-weight-bold;
-        color: $primary;
-        margin-bottom: 0.75rem;
+        @include genesis-cognition('motive');
       }
     }
   }
   
-  // Usage instructions section
   .usage-instructions-section {
-    background: linear-gradient(135deg, lighten($primary, 45%) 0%, $white 100%);
-    border-radius: $border-radius;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
+    @include genesis-environment('chronological');
+    @include genesis-atmosphere('ethereal');
     
     .instructions-container {
-      width: 100%;
-      padding-right: var(--bs-gutter-x, 0.75rem);
-      padding-left: var(--bs-gutter-x, 0.75rem);
-      margin-right: auto;
-      margin-left: auto;
-      max-width: 1140px;
+      @include genesis-environment('focused');
     }
     
     .instructions-title {
-      font-size: $font-size-xl;
-      font-weight: $font-weight-bold;
-      color: $primary;
-      margin-bottom: 2rem;
-      text-align: center;
+      @include genesis-cognition('axiom');
     }
     
     .instructions-steps {
-      counter-reset: step-counter;
-      list-style: none;
-      padding-left: 0;
+      @include genesis-environment('chronological');
       
       .instructions-step {
-        position: relative;
-        margin-bottom: 2rem;
-        padding-left: 4rem;
-        
-        &:before {
-          content: counter(step-counter);
-          counter-increment: step-counter;
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 3rem;
-          height: 3rem;
-          background-color: $primary;
-          color: $white;
-          font-weight: $font-weight-bold;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.5rem;
-        }
+        @include genesis-entity('secondary');
         
         .step-title {
-          font-size: $font-size-lg;
-          font-weight: $font-weight-bold;
-          color: $primary;
-          margin-bottom: 0.75rem;
+          @include genesis-cognition('motive');
         }
         
         .step-description {
-          color: $body-color;
-          margin-bottom: 1rem;
+          @include genesis-cognition('discourse');
         }
         
         .step-tip {
-          background-color: rgba($info, 0.1);
-          border-left: 4px solid $info;
-          padding: 1rem;
-          margin-top: 1rem;
+          @include genesis-entity('secondary');
+          @include genesis-state('stable');
           
           .step-tip-title {
-            font-weight: $font-weight-bold;
-            color: $info;
-            margin-bottom: 0.5rem;
+            @include genesis-cognition('motive');
           }
         }
       }

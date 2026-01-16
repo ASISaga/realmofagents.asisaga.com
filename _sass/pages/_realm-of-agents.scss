@@ -1,175 +1,231 @@
-// Realm of Agents page specific styles
+/**
+ * Realm of Agents page - Ontological SCSS mapping
+ * Maps HTML semantic classes to Genesis ontological roles
+ * SCSS structure mirrors HTML DOM hierarchy
+ */
+
 .realm-of-agents {
-  // Hero section
+  @include genesis-environment('focused');
+  @include genesis-atmosphere('neutral');
+  
   &-hero {
-    @extend .hero-section;
-    padding: $spacer * 4 0;
+    @include genesis-entity('primary');
     
     h1 {
-      font-weight: $font-weight-bold;
-      margin-bottom: $spacer * 2;
+      @include genesis-cognition('axiom');
     }
     
     .lead {
-      font-size: $font-size-lg;
+      @include genesis-cognition('motive');
     }
   }
   
-  // Overview section
   &-overview {
-    padding: $spacer * 3 0;
+    @include genesis-environment('distributed');
     
     .overview-card {
-      height: 100%;
-      border-left: 3px solid $primary;
-      padding-left: $spacer;
-      margin-bottom: $spacer * 2;
+      @include genesis-entity('secondary');
     }
   }
   
-  // Components section
   &-components {
-    background-color: $light;
-    padding: $spacer * 4 0;
+    @include genesis-environment('distributed');
+    @include genesis-atmosphere('ethereal');
     
     .component-card {
-      height: 100%;
-      transition: transform 0.3s ease;
-      
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: $box-shadow;
-      }
+      @include genesis-entity('primary');
+      @include genesis-state('stable');
       
       .card-icon {
-        font-size: 2rem;
-        color: $primary;
-        margin-bottom: $spacer;
+        @include genesis-cognition('motive');
       }
     }
   }
   
-  // Benefits section
   &-benefits {
-    padding: $spacer * 3 0;
+    @include genesis-environment('chronological');
     
     .benefit-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: $spacer * 2;
+      @include genesis-entity('secondary');
       
       .benefit-icon {
-        color: $success;
-        font-size: 1.5rem;
-        margin-right: $spacer;
+        @include genesis-cognition('motive');
       }
     }
   }
   
-  // Use cases
   &-use-cases {
-    background-color: $primary-light;
-    padding: $spacer * 3 0;
+    @include genesis-environment('distributed');
+    @include genesis-atmosphere('ethereal');
     
     .use-case-card {
-      height: 100%;
-      border-radius: $border-radius;
-      overflow: hidden;
+      @include genesis-entity('primary');
       
       .card-header {
-        background-color: $primary;
-        color: $white;
+        @include genesis-entity('imperative');
       }
     }
   }
   
-  // Call to action
   &-cta {
-    @extend .cta-section;
-    padding: $spacer * 4 0;
-    text-align: center;
+    @include genesis-entity('imperative');
+    @include genesis-environment('focused');
     
     .btn-primary {
-      margin-top: $spacer * 2;
-      padding: $spacer ($spacer * 2);
+      @include genesis-synapse('execute');
     }
   }
 }
 
-// Main container for the Realm of Agents overview page
 .realmofagents-main {
-  @extend .container-xxl;
+  @include genesis-environment('focused');
+  @include genesis-atmosphere('neutral');
 
   .overview-section {
-    @extend .mb-5;
-    h1 { @extend .display-4; }
-    .lead { @extend .lead; }
+    @include genesis-entity('primary');
+    
+    h1 {
+      @include genesis-cognition('axiom');
+    }
+    
+    .lead {
+      @include genesis-cognition('motive');
+    }
   }
 
   .purpose-section {
-    @extend .mb-5;
-    h2 { @extend .h2; }
-    ul { @extend .list-unstyled; }
+    @include genesis-entity('secondary');
+    
+    h2 {
+      @include genesis-cognition('axiom');
+    }
+    
+    ul {
+      @include genesis-cognition('discourse');
+    }
   }
 
   .core-components-section {
-    @extend .mb-5;
-    h2, h3 { @extend .h3; }
-    ul { @extend .list-unstyled; }
+    @include genesis-entity('secondary');
+    
+    h2, h3 {
+      @include genesis-cognition('axiom');
+    }
+    
+    ul {
+      @include genesis-cognition('discourse');
+    }
   }
 
   .architecture-section {
-    @extend .mb-5;
-    h2, h3 { @extend .h3; }
-    ul { @extend .list-unstyled; }
+    @include genesis-entity('secondary');
+    
+    h2, h3 {
+      @include genesis-cognition('axiom');
+    }
+    
+    ul {
+      @include genesis-cognition('discourse');
+    }
   }
 
   .features-section {
-    @extend .mb-5;
-    h2, h3 { @extend .h3; }
-    ul { @extend .list-unstyled; }
+    @include genesis-entity('secondary');
+    
+    h2, h3 {
+      @include genesis-cognition('axiom');
+    }
+    
+    ul {
+      @include genesis-cognition('discourse');
+    }
   }
 
   .workflow-section {
-    @extend .mb-5;
-    h2, h3 { @extend .h3; }
-    pre { @extend .bg-light; @extend .p-3; @extend .rounded; }
-    ul { @extend .list-unstyled; }
+    @include genesis-entity('secondary');
+    
+    h2, h3 {
+      @include genesis-cognition('axiom');
+    }
+    
+    pre {
+      @include genesis-cognition('protocol');
+    }
+    
+    ul {
+      @include genesis-cognition('discourse');
+    }
   }
 
   .tech-stack-section {
-    @extend .mb-5;
-    h2, h3 { @extend .h3; }
-    ul { @extend .list-unstyled; }
+    @include genesis-entity('secondary');
+    
+    h2, h3 {
+      @include genesis-cognition('axiom');
+    }
+    
+    ul {
+      @include genesis-cognition('discourse');
+    }
   }
 
   .deployment-section {
-    @extend .mb-5;
-    h2, h3 { @extend .h3; }
-    ul { @extend .list-unstyled; }
+    @include genesis-entity('secondary');
+    
+    h2, h3 {
+      @include genesis-cognition('axiom');
+    }
+    
+    ul {
+      @include genesis-cognition('discourse');
+    }
   }
 
   .contributing-section {
-    @extend .mb-5;
-    h2, h3 { @extend .h3; }
-    ol { @extend .ps-3; }
+    @include genesis-entity('secondary');
+    
+    h2, h3 {
+      @include genesis-cognition('axiom');
+    }
+    
+    ol {
+      @include genesis-cognition('discourse');
+    }
   }
 
   .related-projects-section {
-    @extend .mb-5;
-    h2 { @extend .h3; }
-    ul { @extend .list-unstyled; }
+    @include genesis-entity('secondary');
+    
+    h2 {
+      @include genesis-cognition('axiom');
+    }
+    
+    ul {
+      @include genesis-cognition('discourse');
+    }
   }
 
   .license-section {
-    @extend .mb-5;
-    h2 { @extend .h3; }
+    @include genesis-entity('secondary');
+    
+    h2 {
+      @include genesis-cognition('axiom');
+    }
   }
 
   .contact-section {
-    @extend .mb-5;
-    h2 { @extend .h3; }
-    ul { @extend .list-unstyled; }
-    .platform-note { @extend .fst-italic; }
+    @include genesis-entity('secondary');
+    
+    h2 {
+      @include genesis-cognition('axiom');
+    }
+    
+    ul {
+      @include genesis-cognition('discourse');
+    }
+    
+    .platform-note {
+      @include genesis-cognition('gloss');
+    }
   }
 }

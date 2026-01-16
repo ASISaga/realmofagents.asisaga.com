@@ -14,6 +14,50 @@ The platform provides a web-based interface for:
 - **Collecting feedback** from users and researchers
 - **Showcasing** the practical applications of purpose-driven agents
 
+## Design System
+
+This subdomain uses the **Genesis Ontological SCSS Design System** from the [ASI Saga Theme](https://github.com/ASISaga/theme.asisaga.com).
+
+### Key Principles
+
+- **Zero Raw CSS**: All styling comes from semantic ontological mixins
+- **Semantic Purity**: SCSS describes WHAT content is, not HOW it looks
+- **Three-Tier Architecture**: Content (HTML) → Interface (Mixins) → Engine (Visual)
+- **Living Genome**: Design system evolves through intelligent collaboration
+
+### For Developers
+
+When working with SCSS in this subdomain:
+
+1. **Import ontology first**: `@import "ontology/index";`
+2. **Use semantic mixins**: `genesis-environment`, `genesis-entity`, `genesis-cognition`, etc.
+3. **NO raw CSS properties**: No `padding`, `margin`, `color`, etc.
+4. **Mirror HTML structure**: SCSS nesting matches DOM hierarchy
+
+Example:
+```scss
+---
+---
+@import "ontology/index";
+
+.agent-showcase {
+  @include genesis-environment('distributed');
+  
+  .agent-card {
+    @include genesis-entity('primary');
+    
+    .agent-title {
+      @include genesis-cognition('axiom');
+    }
+  }
+}
+```
+
+For complete guidance, see:
+- `.github/instructions/scss.instructions.md` - Ontological SCSS guidance
+- `.github/instructions/architecture.instructions.md` - Evolution mechanism
+- `.github/prompts/subdomain-evolution-agent.prompt.md` - Proposing new ontological variants
+
 ## Core Components
 
 ### 1. Domain-Specific Fine-Tuned Agents
