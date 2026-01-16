@@ -80,10 +80,6 @@
     
     .specs-row {
       @include genesis-environment('distributed');
-      
-      .specs-column {
-        // Layout handled by environment
-      }
     }
     
     .specs-card {
