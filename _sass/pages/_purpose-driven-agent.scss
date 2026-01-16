@@ -1,24 +1,23 @@
-// filepath: c:\Development\RealmOfAgents\asisaga.github.io\assets\css\pages\_purpose-driven-agent.scss
-// Purpose Driven Agent page specific styles
-// Most styles are now handled by the shared _product-page.scss component
+/**
+ * Purpose Driven Agent page - Ontological SCSS mapping
+ * Maps HTML semantic classes to Genesis ontological roles
+ * SCSS structure mirrors HTML DOM hierarchy
+ */
 
 .purpose-agent-container {
-  // Only include styles that are specific to this product page
-  // and not covered by the shared product page component
+  @include genesis-environment('distributed');
+  @include genesis-atmosphere('neutral');
 
-  // Purpose-specific layout for component cards
-  .product-grid .product-card {
-    // The Purpose page uses a 4-column layout instead of 3-column
-    @extend .col-lg-3;
+  .product-grid {
+    @include genesis-environment('distributed');
     
-    // Special bottom border unique to purpose agent
-    border-bottom: 3px solid var(--color-primary);
-    border-left: none;
+    .product-card {
+      @include genesis-entity('primary');
+      @include genesis-state('stable');
+    }
   }
   
-  // Special styling for architecture diagram
   .product-image {
-    border: 1px solid var(--color-light);
-    padding: 1rem;
+    @include genesis-entity('secondary');
   }
 }
