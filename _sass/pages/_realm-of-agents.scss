@@ -4,228 +4,51 @@
  * SCSS structure mirrors HTML DOM hierarchy
  */
 
-.realm-of-agents {
-  @include genesis-environment('focused');
-  @include genesis-atmosphere('neutral');
+/* Article layout provides the main structure, we only need section-specific styles */
+
+/* Most sections share common styling patterns */
+.overview-section,
+.purpose-section,
+.core-components-section,
+.architecture-section,
+.features-section,
+.tech-stack-section,
+.deployment-section,
+.contributing-section,
+.related-projects-section,
+.license-section,
+.contact-section {
+  @include genesis-entity('secondary');
   
-  &-hero {
-    @include genesis-entity('primary');
-    
-    h1 {
-      @include genesis-cognition('axiom');
-    }
-    
-    .lead {
-      @include genesis-cognition('motive');
-    }
+  h2, h3 {
+    @include genesis-cognition('axiom');
   }
   
-  &-overview {
-    @include genesis-environment('distributed');
-    
-    .overview-card {
-      @include genesis-entity('secondary');
-    }
-  }
-  
-  &-components {
-    @include genesis-environment('distributed');
-    @include genesis-atmosphere('ethereal');
-    
-    .component-card {
-      @include genesis-entity('primary');
-      @include genesis-state('stable');
-      
-      .card-icon {
-        @include genesis-cognition('motive');
-      }
-    }
-  }
-  
-  &-benefits {
-    @include genesis-environment('chronological');
-    
-    .benefit-item {
-      @include genesis-entity('secondary');
-      
-      .benefit-icon {
-        @include genesis-cognition('motive');
-      }
-    }
-  }
-  
-  &-use-cases {
-    @include genesis-environment('distributed');
-    @include genesis-atmosphere('ethereal');
-    
-    .use-case-card {
-      @include genesis-entity('primary');
-      
-      .card-header {
-        @include genesis-entity('imperative');
-      }
-    }
-  }
-  
-  &-cta {
-    @include genesis-entity('imperative');
-    @include genesis-environment('focused');
-    
-    .btn-primary {
-      @include genesis-synapse('execute');
-    }
+  ul, ol {
+    @include genesis-cognition('discourse');
   }
 }
 
-.realmofagents-main {
-  @include genesis-environment('focused');
-  @include genesis-atmosphere('neutral');
-
-  .overview-section {
-    @include genesis-entity('primary');
-    
-    h1 {
-      @include genesis-cognition('axiom');
-    }
-    
-    .lead {
-      @include genesis-cognition('motive');
-    }
+/* Workflow section needs additional code block styling */
+.workflow-section {
+  @include genesis-entity('secondary');
+  
+  h2, h3 {
+    @include genesis-cognition('axiom');
   }
-
-  .purpose-section {
-    @include genesis-entity('secondary');
-    
-    h2 {
-      @include genesis-cognition('axiom');
-    }
-    
-    ul {
-      @include genesis-cognition('discourse');
-    }
+  
+  pre {
+    @include genesis-cognition('protocol');
   }
-
-  .core-components-section {
-    @include genesis-entity('secondary');
-    
-    h2, h3 {
-      @include genesis-cognition('axiom');
-    }
-    
-    ul {
-      @include genesis-cognition('discourse');
-    }
+  
+  ul {
+    @include genesis-cognition('discourse');
   }
+}
 
-  .architecture-section {
-    @include genesis-entity('secondary');
-    
-    h2, h3 {
-      @include genesis-cognition('axiom');
-    }
-    
-    ul {
-      @include genesis-cognition('discourse');
-    }
-  }
-
-  .features-section {
-    @include genesis-entity('secondary');
-    
-    h2, h3 {
-      @include genesis-cognition('axiom');
-    }
-    
-    ul {
-      @include genesis-cognition('discourse');
-    }
-  }
-
-  .workflow-section {
-    @include genesis-entity('secondary');
-    
-    h2, h3 {
-      @include genesis-cognition('axiom');
-    }
-    
-    pre {
-      @include genesis-cognition('protocol');
-    }
-    
-    ul {
-      @include genesis-cognition('discourse');
-    }
-  }
-
-  .tech-stack-section {
-    @include genesis-entity('secondary');
-    
-    h2, h3 {
-      @include genesis-cognition('axiom');
-    }
-    
-    ul {
-      @include genesis-cognition('discourse');
-    }
-  }
-
-  .deployment-section {
-    @include genesis-entity('secondary');
-    
-    h2, h3 {
-      @include genesis-cognition('axiom');
-    }
-    
-    ul {
-      @include genesis-cognition('discourse');
-    }
-  }
-
-  .contributing-section {
-    @include genesis-entity('secondary');
-    
-    h2, h3 {
-      @include genesis-cognition('axiom');
-    }
-    
-    ol {
-      @include genesis-cognition('discourse');
-    }
-  }
-
-  .related-projects-section {
-    @include genesis-entity('secondary');
-    
-    h2 {
-      @include genesis-cognition('axiom');
-    }
-    
-    ul {
-      @include genesis-cognition('discourse');
-    }
-  }
-
-  .license-section {
-    @include genesis-entity('secondary');
-    
-    h2 {
-      @include genesis-cognition('axiom');
-    }
-  }
-
-  .contact-section {
-    @include genesis-entity('secondary');
-    
-    h2 {
-      @include genesis-cognition('axiom');
-    }
-    
-    ul {
-      @include genesis-cognition('discourse');
-    }
-    
-    .platform-note {
-      @include genesis-cognition('gloss');
-    }
+/* Contact section has a special note element */
+.contact-section {
+  .platform-note {
+    @include genesis-cognition('gloss');
   }
 }
