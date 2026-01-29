@@ -6,58 +6,30 @@
 
 /* Article layout provides the main structure, we only need section-specific styles */
 
-.overview-section {
-  @include genesis-entity('secondary');
-}
-
-.purpose-section {
-  @include genesis-entity('secondary');
-  
-  h2 {
-    @include genesis-cognition('axiom');
-  }
-  
-  ul {
-    @include genesis-cognition('discourse');
-  }
-}
-
-.core-components-section {
+/* Most sections share common styling patterns */
+.overview-section,
+.purpose-section,
+.core-components-section,
+.architecture-section,
+.features-section,
+.tech-stack-section,
+.deployment-section,
+.contributing-section,
+.related-projects-section,
+.license-section,
+.contact-section {
   @include genesis-entity('secondary');
   
   h2, h3 {
     @include genesis-cognition('axiom');
   }
   
-  ul {
+  ul, ol {
     @include genesis-cognition('discourse');
   }
 }
 
-.architecture-section {
-  @include genesis-entity('secondary');
-  
-  h2, h3 {
-    @include genesis-cognition('axiom');
-  }
-  
-  ul {
-    @include genesis-cognition('discourse');
-  }
-}
-
-.features-section {
-  @include genesis-entity('secondary');
-  
-  h2, h3 {
-    @include genesis-cognition('axiom');
-  }
-  
-  ul {
-    @include genesis-cognition('discourse');
-  }
-}
-
+/* Workflow section needs additional code block styling */
 .workflow-section {
   @include genesis-entity('secondary');
   
@@ -74,73 +46,8 @@
   }
 }
 
-.tech-stack-section {
-  @include genesis-entity('secondary');
-  
-  h2, h3 {
-    @include genesis-cognition('axiom');
-  }
-  
-  ul {
-    @include genesis-cognition('discourse');
-  }
-}
-
-.deployment-section {
-  @include genesis-entity('secondary');
-  
-  h2, h3 {
-    @include genesis-cognition('axiom');
-  }
-  
-  ul {
-    @include genesis-cognition('discourse');
-  }
-}
-
-.contributing-section {
-  @include genesis-entity('secondary');
-  
-  h2, h3 {
-    @include genesis-cognition('axiom');
-  }
-  
-  ol {
-    @include genesis-cognition('discourse');
-  }
-}
-
-.related-projects-section {
-  @include genesis-entity('secondary');
-  
-  h2 {
-    @include genesis-cognition('axiom');
-  }
-  
-  ul {
-    @include genesis-cognition('discourse');
-  }
-}
-
-.license-section {
-  @include genesis-entity('secondary');
-  
-  h2 {
-    @include genesis-cognition('axiom');
-  }
-}
-
+/* Contact section has a special note element */
 .contact-section {
-  @include genesis-entity('secondary');
-  
-  h2 {
-    @include genesis-cognition('axiom');
-  }
-  
-  ul {
-    @include genesis-cognition('discourse');
-  }
-  
   .platform-note {
     @include genesis-cognition('gloss');
   }
